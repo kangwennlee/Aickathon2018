@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="coqnitive_access_key">f62b197fa2ae21f6585b</string>
+    <string name="coqnitive_secret_key">dd6b807847c476096bf0a4c56bf7952bb440c5de</string>
+    <string name="title_ultra_boost">ADIDAS ULTRA BOOST</string>
+    <string name="myr_600_00">MYR 600.00</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="desc_ultra_boost">LIGHT, FAST RUNNING SHOES DESIGNED FOR
+        COMFORT AND RESPONSE.\nStep into these running shoes and you\'ll rethink
+        everything you know about what fast and comfortable
+        feel like.\nThese limited-edition, ultra-cushioned running shoes
+        are the ultimate in luxurious stability. A boost™
+        midsole offers incredible energy-returning
+        cushioning, and a breathable adidas Primeknit upper
+        gives them a supportive and sock-like fit.
+    </string>
+    <string name="view_in_social">View In Social</string>
 </resources>

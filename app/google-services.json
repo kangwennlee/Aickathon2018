@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "634459646305",
+    "firebase_url": "https://aickathon-8beb1.firebaseio.com",
+    "project_id": "aickathon-8beb1",
+    "storage_bucket": "aickathon-8beb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634459646305:android:30caf5c1af5b0d6a",
+        "android_client_info": {
+          "package_name": "hal.aickathon.com.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "634459646305-0v3a62fr7s702502jkjsgkctul07dbq2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hal.aickathon.com.myapplication",
+            "certificate_hash": "5175d45dbeadc8dcc296c4833a02cf444a6a566b"
+          }
+        },
+        {
+          "client_id": "634459646305-82oai49jhqerr4d7b5kk263lbdg4s4oc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl-1ki6HBRZSnax7Z9Re-Yqfr688Xfzsw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "634459646305-82oai49jhqerr4d7b5kk263lbdg4s4oc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

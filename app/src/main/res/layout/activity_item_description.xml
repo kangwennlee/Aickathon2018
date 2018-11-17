@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ItemDescriptionActivity"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tvHeader"
+                  android:textStyle="bold"
+                  android:textColor="@android:color/black"
+                  android:textSize="30sp"
+                  android:text="@string/title_ultra_boost"/>
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tvPrice"
+                  android:textStyle="bold"
+                  android:textColor="@android:color/black"
+                  android:textSize="30sp"
+                  android:text="@string/myr_600_00"/>
+
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="300dp"
+                   android:id="@+id/ivImage"
+                   android:src="@drawable/pic1"/>
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tvDescTitle"
+                  android:textStyle="bold"
+                  android:textColor="@android:color/black"
+                  android:textSize="20sp"
+                  android:text="@string/description"/>
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tvDesc"
+                  android:textColor="@android:color/black"
+                  android:textSize="15sp"
+                  android:text="@string/desc_ultra_boost"/>
+
+        <Button
+                android:id="@+id/btnSocial"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/view_in_social"/>
+
+    </LinearLayout>
+
+</ScrollView>
