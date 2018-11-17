@@ -42,4 +42,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-ml-vision-face-model:17.0.2'
     implementation 'com.android.volley:volley:1.1.1'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation ("com.github.bumptech.glide:glide:4.8.0") {
+        exclude group: "com.android.support"
+    }
+    implementation "com.android.support:support-fragment:27.1.1"
 }

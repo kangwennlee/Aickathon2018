@@ -21,7 +21,6 @@ import android.support.v7.widget.GridLayoutManager
 import android.util.Log
 import android.util.SparseIntArray
 import android.view.Surface
-import android.view.View
 import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
@@ -64,19 +63,12 @@ class MainActivity : AppCompatActivity() {
             override fun onClicked(item: Item, position: Int) {
                 val i = Intent(this@MainActivity, ItemDescriptionActivity::class.java)
                 i.putExtra("image", item.image)
+                i.putExtra("title", item.title)
+                i.putExtra("name", item.name)
+                i.putExtra("price", item.price)
                 startActivity(i)
             }
         })
-        //btnLoad.setOnClickListener {
-        //    createDialog()
-        //}
-
-
-        btnInstaFetch.setOnClickListener {
-            // Handler code here.
-            val intent = Intent(this, instafetch::class.java)
-            startActivity(intent);
-        }
     }
 
     private fun createDialog() {
