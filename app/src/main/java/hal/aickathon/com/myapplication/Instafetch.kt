@@ -4,6 +4,7 @@ import android.graphics.Bitmap
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
@@ -15,10 +16,12 @@ import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 import org.json.JSONObject
 import java.io.ByteArrayOutputStream
+import java.util.*
 
 class Instafetch : AppCompatActivity() {
 
     var diffBotArray = ArrayList<DiffBotItem>()
+    var diffbotArrayNoCurrency = ArrayList<DiffBotItem>()
     var diffBotArrayFiltered = ArrayList<DiffBotItem>()
     lateinit var adapter: DiffBotAdapter
 
@@ -39,8 +42,8 @@ class Instafetch : AppCompatActivity() {
         })
         rvItems.adapter = adapter
         btnFilter.setOnClickListener {
-            for (i in 0 until diffBotArray.size) {
-                postPic(diffBotArray[i])
+            for (i in 0 until diffbotArrayNoCurrency.size) {
+                postPic(diffbotArrayNoCurrency[i])
             }
             adapter = DiffBotAdapter(diffBotArrayFiltered, this@Instafetch, object : DiffBotAdapter.OnRecyclerListener {
                 override fun onClicked(diffBotItem: DiffBotItem, position: Int) {
@@ -124,6 +127,49 @@ class Instafetch : AppCompatActivity() {
                         diffBotArray.add(DiffBotItem(objects[i].getString("url"), objects[i].getString("title")))
                     }
                 }
+
+
+                // get all currency name and symbols in set of strings
+
+                val allCurrency = HashSet<String>()
+                val locs = Locale.getAvailableLocales()
+
+                for (loc in locs) {
+                    try {
+                        val currency = Currency.getInstance(loc).currencyCode
+                        val symbol = Currency.getInstance(loc).symbol
+
+                        if (currency != null) {
+                            allCurrency.add(currency)
+                            if (symbol != null) {
+                                allCurrency.add(symbol)
+                            }
+                        }
+                    } catch (exc: Exception) {
+                        // Locale not found
+                    }
+
+                }
+
+                //remove false positive
+                allCurrency.remove("GEL")
+
+                //filter currency
+
+                for (i in 0 until diffBotArray.size) {
+                    var noCurrency = true
+                    for (n in 0 until allCurrency.size) {
+                        if (diffBotArray[i].itemTitle.contains(allCurrency.elementAt(n))) {
+                            Log.d("currencyfilter canceled", allCurrency.elementAt(n))
+                            noCurrency = false
+                            break
+                        }
+                    }
+                    if (noCurrency) {
+                        diffbotArrayNoCurrency.add(diffBotArray[i])
+                    }
+                }
+
                 adapter.notifyDataSetChanged()
                 //for (i in 0 until diffBotArray.size) {
                 //  postPic(url,diffBotArray[i])
