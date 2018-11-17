@@ -4,7 +4,6 @@ import android.graphics.Bitmap
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
@@ -160,7 +159,7 @@ class Instafetch : AppCompatActivity() {
                     var noCurrency = true
                     for (n in 0 until allCurrency.size) {
                         if (diffBotArray[i].itemTitle.contains(allCurrency.elementAt(n))) {
-                            Log.d("currencyfilter canceled", allCurrency.elementAt(n))
+                            //Log.d("currencyfilter canceled", allCurrency.elementAt(n))
                             noCurrency = false
                             break
                         }
