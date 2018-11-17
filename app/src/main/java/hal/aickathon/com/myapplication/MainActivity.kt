@@ -21,6 +21,7 @@ import android.support.v7.widget.GridLayoutManager
 import android.util.Log
 import android.util.SparseIntArray
 import android.view.Surface
+import android.view.View
 import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
@@ -70,6 +71,12 @@ class MainActivity : AppCompatActivity() {
         //    createDialog()
         //}
 
+
+        btnInstaFetch.setOnClickListener {
+            // Handler code here.
+            val intent = Intent(this, instafetch::class.java)
+            startActivity(intent);
+        }
     }
 
     private fun createDialog() {
@@ -314,4 +321,5 @@ class MainActivity : AppCompatActivity() {
             ORIENTATIONS.append(Surface.ROTATION_270, 180)
         }
     }
+
 }

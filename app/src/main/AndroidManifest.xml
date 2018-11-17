@@ -43,6 +43,8 @@
         </activity>
         <activity android:name=".SocialActivity">
         </activity>
+        <activity android:name=".instafetch">
+        </activity>
     </application>
 
 </manifest>
