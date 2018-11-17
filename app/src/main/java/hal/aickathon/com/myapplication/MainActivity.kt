@@ -54,11 +54,11 @@ class MainActivity : AppCompatActivity() {
         rvItems.layoutManager = GridLayoutManager(this@MainActivity, 2)
         val items = ArrayList<Item>()
         items.add(Item(R.drawable.pic1, "Adidas", "Ultra Boost", "MYR 600.00"))
-        items.add(Item(R.drawable.pic2, "Adidas", "Ultra Boost", "MYR 600.00"))
-        items.add(Item(R.drawable.pic3, "Adidas", "Ultra Boost", "MYR 600.00"))
-        items.add(Item(R.drawable.pic4, "Adidas", "Ultra Boost", "MYR 600.00"))
-        items.add(Item(R.drawable.pic5, "Adidas", "Ultra Boost", "MYR 600.00"))
-        items.add(Item(R.drawable.pic6, "Adidas", "Ultra Boost", "MYR 600.00"))
+        items.add(Item(R.drawable.pic2, "Adidas", "NMD R1", "MYR 600.00"))
+        items.add(Item(R.drawable.pic3, "Nike", "Air Jordan 1", "MYR 600.00"))
+        items.add(Item(R.drawable.pic4, "Adidas", "Yeezy", "MYR 600.00"))
+        items.add(Item(R.drawable.pic5, "Nike", "Air Max 270", "MYR 600.00"))
+        items.add(Item(R.drawable.pic6, "Adidas", "NMD XR1", "MYR 600.00"))
         rvItems.adapter = ItemAdapter(items, this@MainActivity, object : ItemAdapter.OnRecyclerListener {
             override fun onClicked(item: Item, position: Int) {
                 val i = Intent(this@MainActivity, ItemDescriptionActivity::class.java)

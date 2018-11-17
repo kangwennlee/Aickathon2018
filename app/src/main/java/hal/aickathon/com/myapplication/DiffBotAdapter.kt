@@ -30,8 +30,6 @@ class DiffBotAdapter(
     override fun onBindViewHolder(holderSocial: DiffViewHolder, position: Int) {
         val item = items[position]
         Picasso.get().load(item.itemURL).into(holderSocial.ivImage)
-        var test = Picasso.get().load(item.itemURL)
-        var bitmap = test.get()
         holderSocial.tvUser.text = "testUser"
         holderSocial.tvDesc.text = item.itemTitle
         holderSocial.tvLikes.text = "100 likes"
